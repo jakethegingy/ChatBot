@@ -1,6 +1,6 @@
 package chat.runner;
 
-public class ChatRunner 
+public class ChatbotRunner 
 {
 	public static void main(String [] args)
 	{

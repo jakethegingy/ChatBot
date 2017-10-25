@@ -2,11 +2,11 @@ package chat.controller;
 
 import chat.model.ChatView;
 
-public class ChatController 
+public class ChatbotController 
 {
 	private ChatView chatbot;
 	
-	public ChatController()
+	public ChatbotController()
 	{
 		chatbot = new ChatView();
 	}
