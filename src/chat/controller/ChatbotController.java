@@ -25,7 +25,6 @@ public class ChatbotController
 		}
 	}
 	
-	public String interactWithChatbot(String input)
 	
 	private String popupChat(String chat)
 	{
@@ -36,6 +35,6 @@ public class ChatbotController
 		return chatbotSays;
 	}
 	
-	public Chatbot getChatbot()
+	
 }
 

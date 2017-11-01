@@ -61,30 +61,37 @@ public class Movie
 
 	public void setTitle(String title)
 	{
+		
 	}
 
 	public void setGenre(String genre)
 	{
+		
 	}
 
 	public void setRatingMPAA(String ratingMPAA)
 	{
+		
 	}
 
 	public void setReview(String review)
 	{
+		
 	}
 
 	public void setLength(int length)
 	{
+		
 	}
 
 	public void setReleaseDate(LocalDate releaseDate)
 	{
+		
 	}
 
 	public void setStarScore(double starScore)
 	{
+		
 	}
 	
 	public String toString()
