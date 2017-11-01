@@ -23,19 +23,22 @@ public class Chatbot
 	{
 		this.movieList = null;
 		this.shoppingList = new ArrayList<String>();
-		this.cuteAnimalMemes = null;
+		this.cuteAnimalMemes = new ArrayList<String>();
 		this.currentTime = null;
-		this.questions = null;
+		this.questions = new String [10];
 		this.username = username;
 		this.content = null;
 		this.intro = null;
 		this.currentTime = null;
-		this.topics = null;
+		this.topics = new String [7];
 		this.verbs = new String [3];
-		this.followUps = null;
+		this.followUps = new String [5];
 		
+		buildCuteAnimals();
+		buildQuestions();
 		buildVerbs();
 		buildShoppingList();
+		buildChatbotResponse();
 	}
 	
 	private void buildVerbs()
@@ -62,17 +65,32 @@ public class Chatbot
 	
 	private void buildCuteAnimals()
 	{
-		
+		cuteAnimalMemes.add("otter");
+		cuteAnimalMemes.add("otter");
+		cuteAnimalMemes.add("FLOOFER");
+		cuteAnimalMemes.add("FLOOFER");
+		cuteAnimalMemes.add("FLOOFER");
+		cuteAnimalMemes.add("FLOOFER");
+		cuteAnimalMemes.add("FLOOFER");
+		cuteAnimalMemes.add("kittie");
+		cuteAnimalMemes.add("kittie");
+		cuteAnimalMemes.add("kittie");
+		cuteAnimalMemes.add("kittie");
+		cuteAnimalMemes.add("pupper");
 	}
 	
 	private void buildQuestions()
 	{
-		
-	}
-	
-	public String processConversation(String input)
-	{
-		return null;
+		questions[0] = "What is your name ?";
+		questions[1] = "How much woood could a wood chuck chuck if a wood chuck could chuck wood?";
+		questions[2] = "How tall is mitch?";
+		questions[3] = "Was poppin B?";
+		questions[4] = "Is a snake a giant worm or a legless lizard?";
+		questions[5] = "What is the answer to the universe?";
+		questions[6] = "Whomst the flip invented top raman?";
+		questions[7] = "What is your favorite pokemon?";
+		questions[8] = "What is your favoirte food?";
+		questions[9] = "What is two plus two?";
 	}
 	
 	public boolean lengthChecker(String input)
@@ -83,6 +101,21 @@ public class Chatbot
 		{
 			validLength = true;
 		}
+	}
+	
+	public String processConversation(String input)
+	{
+		String chatbotResponse = "";
+		chatbotResponse += "You said: " + "\n" + input+ "\n";
+		chatbotResponse += buildChatbotResponse();
+		return chatbotResponse;
+	}
+	
+	private String buildChatbotResponsee()
+	{
+		String response = "";
+		
+		return response;
 	}
 	
 	public boolean htmlTagChecker(String input)
@@ -147,7 +180,7 @@ public class Chatbot
 
 	public String [] getQuestions()
 	{
-		return null;
+		return questions;
 	}
 	
 	public String[] getVerbs()

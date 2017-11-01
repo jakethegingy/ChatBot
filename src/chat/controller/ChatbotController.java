@@ -1,14 +1,14 @@
 package chat.controller;
 
-import chat.model.ChatView;
+import chat.view.PopupDisplay;
 
 public class ChatbotController 
 {
-	private ChatView chatbot;
+	private Chatbot chatbot;
 	
 	public ChatbotController()
 	{
-		chatbot = new ChatView();
+		chatbot = new Chatbot();
 	}
 	public void start()
 	{

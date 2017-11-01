@@ -99,7 +99,7 @@ public class ChatbotTest
 	@Test
 	public void testCuteAnimalMemeChecker()
 	{
-		assertFalse("Racist memes aren't cute", testedChatbot.cuteAnimalMemeChecker("pepe"));
+		assertFalse("Racist memes aren't cute", testedChatbot.cuteAnimalMemeChecker("bad luck brian"));
 		assertTrue("Required cuteness missing - pupper", testedChatbot.cuteAnimalMemeChecker("pupper"));
 		assertTrue("Required cuteness missing - otter", testedChatbot.cuteAnimalMemeChecker("otter"));
 		assertTrue("Required cuteness missing - kittie", testedChatbot.cuteAnimalMemeChecker("kittie"));
@@ -168,7 +168,7 @@ public class ChatbotTest
 			{
 				otterCount += 1;
 			}
-			if (cute.toUpperCase().contains("floofer"))
+			if (cute.toUpperCase().contains("FLOOFER"))
 			{
 				flooferCount += 1;
 			}
