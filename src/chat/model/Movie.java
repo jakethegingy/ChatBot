@@ -30,7 +30,7 @@ public class Movie
 
 	public String getGenre()
 	{
-		this.genre = "@@@@@@@";
+		this.genre = "@@@@@@@";i
 		return genre;
 	}
 
