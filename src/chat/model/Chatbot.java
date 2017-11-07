@@ -1,6 +1,10 @@
 package chat.model;
 
 import java.util.List;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.time.LocalTime;
 import java.util.ArrayList;
 
@@ -137,7 +141,18 @@ public class Chatbot
 	
 	public boolean userNameChecker(String input)
 	{
-		return false;
+		if(input.equals(null)|| input.contains("@@")|| input.contains(" ")|| input.contains("@")|| input.contains(".com"))
+		{
+			return false;
+		}
+		else if(input.equals(null)|| !input.contains("@@")|| !input.contains(" ")|| !input.contains("@")|| !input.contains(".com"))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	
 	public boolean contentChecker(String contentCheck)
@@ -171,9 +186,20 @@ public class Chatbot
 		{
 			return true;
 		}
+		if(input.contains("")|| input.equals(null)|| input.contains("exit")|| input.contains("Quit")|| input.contains("QUIT")|| input.contains("Is it time to quit?"))
+		{
+			
+		}
 		return false;
 	}
 
+	//assertFalse("Blank does not mean quit", testedChatbot.quitChecker(""));
+	//assertFalse("Null does not mean quit", testedChatbot.quitChecker(null));
+	//assertFalse("Exit does not mean quit", testedChatbot.quitChecker("exit"));
+	//assertTrue("Quit does mean quit", testedChatbot.quitChecker("Quit"));
+	//assertTrue("QUIT also means quit", testedChatbot.quitChecker("QUIT"));
+	//assertFalse("Quit with other words does not mean quit", testedChatbot.quitChecker("Is it time to quit?"));
+	
 	public boolean keyboardMashChecker(String sample)
 	{
 		return false;
