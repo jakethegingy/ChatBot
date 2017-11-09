@@ -98,7 +98,7 @@ public class Chatbot
 	}
 	
 	/**
-	 * Describe what the method does: this method checks the length of the input
+	 * Describe what the method does: this method checks the length of the input 
 	 * @param input processes it
 	 * @return returns valid string
 	 */
