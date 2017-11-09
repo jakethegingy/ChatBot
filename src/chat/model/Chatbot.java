@@ -97,6 +97,11 @@ public class Chatbot
 		questions[9] = "What is two plus two?";
 	}
 	
+	/**
+	 * Describe what the method does: this method checks the length of the input
+	 * @param input processes it
+	 * @return returns valid string
+	 */
 	public boolean lengthChecker(String input)
 	{
 		boolean validLength = false;
@@ -117,6 +122,10 @@ public class Chatbot
 		
 		return chatbotResponse;
 	}
+	/**
+	 * Description of this method: This builds a random response from my different arrays
+	 * @return and it returns a random response using the chat-bot sentence part arrays
+	 */
 	
 	private String buildChatbotResponse()
 	{
@@ -148,6 +157,11 @@ public class Chatbot
 	{
 		return false;
 	}
+	
+	/*So this method checks to see if there are a couple of different things in the user name. If there are not these things then it returns false
+	 * if there are some extra things then it also returns false
+	 * 
+	 */
 	
 	public boolean userNameChecker(String input)
 	{
@@ -190,6 +204,12 @@ public class Chatbot
 		return false;
 	}
 
+	/**
+	 * This checks to see if you are trying to quit. It only accepts "quit" as a valid quit command
+	 * @param exitString
+	 * @return returns false if the test does not pass.
+	 */
+	
 	public boolean quitChecker(String exitString)
 	{
 		if (exitString.equalsIgnoreCase("quit"))
