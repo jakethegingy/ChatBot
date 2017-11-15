@@ -8,7 +8,7 @@ public class PopupDisplay
 	
 	public PopupDisplay()
 	{
-		icon = new ImageIcon(getClass().getResource("Chicken4U.png"));
+		icon = new ImageIcon(getClass().getResource("images/Chicken4U.png"));
 		windowTitle = "Supreme Ogre Lard Jathanual the Chatbot exclaims: ";	
 	}
 	

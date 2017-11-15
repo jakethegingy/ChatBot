@@ -20,11 +20,11 @@ public class ChatbotController
 	{
 		String response = display.collectResponse("what do you want to talk about?");
 		
-		while (chatbot.lengthChecker(response) && !chatbot.quitChecker(response))
-		{
-			response = popupChat(response);
-			response = display.collectResponse(response);
-		}
+//		while (chatbot.lengthChecker(response) && !chatbot.quitChecker(response))
+//		{
+//			response = popupChat(response);
+//			response = display.collectResponse(response);
+//		}
 	}
 	
 	
