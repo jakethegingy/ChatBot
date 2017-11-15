@@ -8,11 +8,13 @@ public class ChatbotController
 {
 	private Chatbot chatbot;
 	private PopupDisplay display;
+	private ChatFrame appFrame;
 	
 	public ChatbotController()
 	{
 		chatbot = new Chatbot("Ya Boi Gingy");
 		display = new PopupDisplay();
+		appFrame = new ChatFrame(this);
 	}
 	public void start()
 	{
