@@ -26,7 +26,7 @@ public class Chatbot
 	
 	public Chatbot(String username)
 	{
-		this.movieList = null;
+		this.movieList = new ArrayList<Movie>();
 		this.shoppingList = new ArrayList<String>();
 		this.cuteAnimalMemes = new ArrayList<String>();
 		this.currentTime = null;
@@ -43,6 +43,7 @@ public class Chatbot
 		buildQuestions();
 		buildVerbs();
 		buildShoppingList();
+		buildMovieList();
 	}
 	
 	private void buildVerbs()
@@ -55,7 +56,7 @@ public class Chatbot
 	
 	private void buildMovieList()
 	{
-		
+		movieList.add(new Movie("Sand Lot"));
 	}
 	
 	private void buildShoppingList()
