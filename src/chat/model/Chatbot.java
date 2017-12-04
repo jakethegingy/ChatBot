@@ -24,6 +24,7 @@ public class Chatbot
 	private LocalTime currentTime;
 	private String chatbotResponse;
 	
+	
 	public Chatbot(String username)
 	{
 		this.movieList = new ArrayList<Movie>();
@@ -34,7 +35,7 @@ public class Chatbot
 		this.username = username;
 		this.content = null;
 		this.intro = null;
-		this.currentTime = null;
+		this.currentTime = LocalTime.now();
 		this.topics = new String [7];
 		this.verbs = new String [4];
 		this.followUps = new String [5];
@@ -117,7 +118,8 @@ public class Chatbot
 	public String processConversation(String input)
 	{
 		String chatbotResponse = "";
-		chatbotResponse += "You said: " + "\n" + input+ "\n";
+		chatbotResponse += currentTime.getHour() + ":" + currentTime.getMinute() + " ";
+		chatbotResponse += "You said:" + "\n" + input + "\n";
 		
 		chatbotResponse += buildChatbotResponse();
 		
