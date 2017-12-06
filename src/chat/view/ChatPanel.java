@@ -13,6 +13,7 @@ import chat.view.images;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JScrollPane;
+import java.awt.event.KeyEvent;
 public class ChatPanel extends JPanel 
 {
 	private JTextArea chatArea;
@@ -96,6 +97,22 @@ public class ChatPanel extends JPanel
 				chatArea.append(displayText);
 				inputField.setText("");
 			}
+		});
+		
+		inputField.addActionListener(new ActionListener() 
+		{
+		
+			public void jTextField1KeyPressed(java.awt.event.KeyEvent evt) 
+			{
+				if(evt.getKeyCode() == KeyEvent.VK_ENTER) 
+				{
+					// Enter was pressed. Your code goes here.
+					String userText = inputField.getText();
+					String displayText = appController.interactWithChatbot(userText);
+					chatArea.append(displayText);
+					inputField.setText("");
+				}
+			} 
 		});
 	}
 }

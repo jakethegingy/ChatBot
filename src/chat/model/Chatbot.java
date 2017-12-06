@@ -150,7 +150,7 @@ public class Chatbot
 		if(random % 2 == 0)
 		{
 			random = (int) (Math.random() * movieList.size());
-			response += movieList.get(random).getTitle() + " is a great movie!";
+			response += movieList.get(random).getTitle() + " is a great movie! \n";
 		}
 		
 		return response;
