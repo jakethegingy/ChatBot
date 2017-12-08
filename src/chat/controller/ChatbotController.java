@@ -16,6 +16,9 @@ public class ChatbotController
 		display = new PopupDisplay();
 		appFrame = new ChatFrame(this);
 	}
+	/*
+	 * this creates the specifics for the small popup at the beginning
+	 */
 	public void start()
 	{
 		display.displayText("Welcome to Chatbot my dude!");
@@ -26,7 +29,9 @@ public class ChatbotController
 //			response = display.collectResponse(response);
 //		}
 	}
-	
+	/*
+	 * this creates the welcome message.
+	 */
 	public String interactWithChatbot(String input)
 	{
 		String chatbotSays = "";
@@ -40,12 +45,17 @@ public class ChatbotController
 		
 		return chatbotSays;
 	}
-	
+	/*
+	 * if the chatbot hears quit then it will quit.
+	 */
 	private void close()
 	{
 		display.displayText("Goodbye");
 		System.exit(0);
 	}
+	/*
+	 * this sends a message as the popup closes.
+	 */
 	private String popupChat(String chat)
 	{
 		String chatbotSays = "";
@@ -54,7 +64,9 @@ public class ChatbotController
 		
 		return chatbotSays;
 	}
-	
+	/*
+	 * this creates the chatbot popup window.
+	 */
 	
 }
 
